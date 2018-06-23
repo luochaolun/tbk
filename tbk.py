@@ -120,7 +120,7 @@ def makeGoodsImg(dt):
         imgurl = 'https:'+imgurl
 
     title = dt['title'].strip()
-    price = str(dt['sale_price']).strip()
+    price = str(float('%.2f' % dt['sale_price'])).strip()
     dlj = dt['dlj'].strip()
     ewmImg = makeAttachImg(title, price, dlj)
 
